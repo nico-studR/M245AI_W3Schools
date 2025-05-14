@@ -1,0 +1,95 @@
+<!-- aufgabe3_schwer_regressionsvergleich_loesung.html -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Regressionen im Vergleich</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<h2>Regressionen im Vergleich</h2>
+<canvas id="chart" width="800" height="400"></canvas>
+
+<script>
+    const x = [50, 60, 70, 80, 90, 100, 110, 120];
+    const y = [6, 6.8, 8.2, 9.5, 10.5, 12.5, 15, 18.2];
+
+    function lineareRegression(x, y) {
+        const n = x.length;
+        const sumX = x.reduce((a, b) => a + b);
+        const sumY = y.reduce((a, b) => a + b);
+        const sumXY = x.reduce((sum, xi, i) => sum + xi * y[i], 0);
+        const sumX2 = x.reduce((sum, xi) => sum + xi * xi, 0);
+
+        const m = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
+        const b = (sumY - m * sumX) / n;
+
+        return x.map(xi => m * xi + b);
+    }
+
+    function polynomRegression2(x, y) {
+        // Einfacher Fit mit drei Punkten als Beispiel
+        const a = 0.002;  // Beispielhafte Koeffizienten
+        const b = 0.1;
+        const c = 1.5;
+        return x.map(xi => a * xi * xi + b * xi + c);
+    }
+
+    const yLinear = lineareRegression(x, y);
+    const yPoly = polynomRegression2(x, y);
+
+    new Chart(document.getElementById("chart"), {
+        type: 'line',
+        data: {
+            labels: x,
+            datasets: [
+                {
+                    label: 'Originaldaten',
+                    data: y,
+                    borderColor: 'blue',
+                    backgroundColor: 'blue',
+                    pointStyle: 'circle',
+                    fill: false,
+                    showLine: false
+                },
+                {
+                    label: 'Lineare Regression',
+                    data: yLinear,
+                    borderColor: 'orange',
+                    fill: false
+                },
+                {
+                    label: 'Polynom-Regression (Grad 2)',
+                    data: yPoly,
+                    borderColor: 'green',
+                    fill: false
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Regressionen im Vergleich'
+                }
+            },
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Hausgröße (m²)'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Preis (Mio CHF)'
+                    }
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>
