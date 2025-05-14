@@ -1,0 +1,62 @@
+🧠 Lektion 4 – Programmieraufgaben (Adam Laib)
+
+🟢 Aufgabe 1 – Einfach: „Vorhersage mit einem ML-Modell“
+Bezug zur Lektion: Terminologie – Beziehung: y = b + wx
+
+Aufgabenstellung:
+Schreibe ein Programm, das folgende lineare Beziehung verwendet:
+
+    y = b + w * x
+
+Dabei ist:
+- x eine Zahl, die der Benutzer eingibt
+- w = 2.5 (Gewicht)
+- b = 5 (Bias/Startwert)
+
+Was du tun musst:
+- Frage den Benutzer nach einer Zahl x
+- Berechne y mit der Formel oben
+- Gib y mit einem kurzen Satz aus
+
+Beispielausgabe:
+    Gib einen Eingabewert ein: 4  
+    Das Modell sagt voraus: 15.0
+
+
+🟡 Aufgabe 2 – Mittel: „Cluster sichtbar machen“
+Bezug zur Lektion: Cluster, Clustering, Cluster identifizieren
+
+Aufgabenstellung:
+Schreibe ein Programm, das zufällig 2D-Datenpunkte erzeugt, diese mithilfe eines Clustering-Algorithmus in Gruppen einteilt und die Cluster anzeigt.
+
+Was du tun musst:
+- Erzeuge Daten mit sklearn.datasets.make_blobs (100 Punkte, 3 Cluster)
+- Verwende KMeans von sklearn.cluster mit n_clusters=3
+- Zeige die Daten mit matplotlib.pyplot:
+  - Jeder Cluster soll eine eigene Farbe haben
+  - Markiere die Zentren der Cluster mit einem X
+- Bonus: Zeige im Titel des Diagramms: „Cluster-Erkennung mit KMeans“
+
+
+🔴 Aufgabe 3 – Schwer: „Korrelation berechnen“
+Bezug zur Lektion: Korrelationskoeffizient
+
+Aufgabenstellung:
+Schreibe ein Programm, das aus zwei Zahlenlisten x und y den Korrelationskoeffizienten r berechnet – ohne externe Funktionen wie numpy.corrcoef.
+
+Was du tun musst:
+- Erstelle zwei Listen x und y mit jeweils 10 Zahlenwerten
+- Berechne den Mittelwert jeder Liste
+- Verwende die Formel aus der Lektion, um r zu berechnen:
+
+      r = sum((xi - x̄)(yi - ȳ)) / sqrt(sum((xi - x̄)^2) * sum((yi - ȳ)^2))
+
+- Gib r aus und zeige mit einer if-Abfrage, wie stark die Beziehung ist:
+
+      r > 0.7     → starke positive Korrelation
+      r < -0.7    → starke negative Korrelation
+      sonst       → schwache oder keine Korrelation
+
+Beispielausgabe:
+    Korrelationskoeffizient r = 0.92  
+    → starke positive Korrelation

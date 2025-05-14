@@ -1,0 +1,79 @@
+<!-- cluster_kmeans_solution.html -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Cluster-Erkennung mit KMeans</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<canvas id="clusterChart" width="600" height="400"></canvas>
+
+<script>
+    function generateData(n, clusters) {
+        const data = [];
+        for (let i = 0; i < clusters; i++) {
+            const centerX = Math.random() * 100;
+            const centerY = Math.random() * 100;
+            for (let j = 0; j < n / clusters; j++) {
+                data.push({
+                    x: centerX + Math.random() * 10,
+                    y: centerY + Math.random() * 10
+                });
+            }
+        }
+        return data;
+    }
+
+    function kMeans(data, k) {
+        const centers = data.slice(0, k);
+        const clusters = Array.from({ length: k }, () => []);
+
+        data.forEach(point => {
+            let minDist = Infinity;
+            let index = 0;
+            centers.forEach((center, i) => {
+                const dist = Math.hypot(point.x - center.x, point.y - center.y);
+                if (dist < minDist) {
+                    minDist = dist;
+                    index = i;
+                }
+            });
+            clusters[index].push(point);
+        });
+
+        return { clusters, centers };
+    }
+
+    const data = generateData(100, 3);
+    const { clusters, centers } = kMeans(data, 3);
+
+    const datasets = clusters.map((group, i) => ({
+        label: `Cluster ${i + 1}`,
+        data: group,
+        backgroundColor: `hsl(${i * 120}, 70%, 50%)`
+    }));
+
+    datasets.push({
+        label: 'Zentren',
+        data: centers,
+        backgroundColor: 'black',
+        pointStyle: 'cross',
+        pointRadius: 10
+    });
+
+    new Chart(document.getElementById('clusterChart'), {
+        type: 'scatter',
+        data: { datasets },
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Cluster-Erkennung mit KMeans'
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>
