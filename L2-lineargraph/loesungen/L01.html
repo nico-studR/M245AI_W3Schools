@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='de-CH' >
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<body>
+<div id="myPlot" style="width:100%;max-width:700px"></div>
+
+
+<script>
+    const xValues = [];
+    const yValues = [];
+
+    // Werte werden generiert und in die Listen hinzugefügt.
+    for (let x = 0; x <= 10; x += 1) {
+        xValues.push(x);
+        yValues.push(x);
+    }
+
+    // Den Achsen werden jeweils eine Liste angegeben
+    const data = [{
+        x: xValues,
+        y: yValues,
+        mode: "lines"
+    }];
+
+    // Optional: Einen Titel hinzufügen.
+    const layout = {title: "y = x"};
+
+    // Diagramm darstellen
+    Plotly.newPlot("myPlot", data, layout);
+</script>
+
+</body>
+</html>
