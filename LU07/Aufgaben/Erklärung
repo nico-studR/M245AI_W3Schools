@@ -1,0 +1,61 @@
+Lektion 7 – Programmieraufgaben (Adam Laïb)
+
+Aufgabe 1 – Einfach: „Lineare Preisvorhersage mit Rundung“
+Bezug zur Lektion: Lineare Regressionsfunktion
+
+Aufgabenstellung:
+Erstelle ein Programm, das den Preis eines Hauses basierend auf seiner Größe vorhersagt – das Ergebnis soll aber auf ganze Millionen gerundet werden.
+
+Was du tun musst:
+- Verwende folgende Formel: y = 0.09 * x + 1.5
+- x ist die Hausgröße (m²), vom Benutzer eingegeben
+- Gib y auf eine ganze Zahl gerundet aus
+
+Beispielausgabe:
+Hausgröße (m²): 85  
+Vorhergesagter Preis: 9 Millionen CHF
+
+
+Aufgabe 2 – Mittel: „Mehrere Vorhersagen auf einmal“
+Bezug zur Lektion: Lineare Beziehungen über mehrere Eingaben
+
+Aufgabenstellung:
+Erstelle ein Programm, das mehrere Hausgrößen (in einer Liste) durchgeht und für jede Größe den vorhergesagten Preis ausgibt.
+
+Was du tun musst:
+- Benutze eine Liste: hausgroessen = [50, 75, 100, 125, 150]
+- Berechne zu jeder Größe den Preis mit: y = 0.1 * x + 2
+- Gib eine sauber formatierte Liste mit Vorhersagen aus
+
+Beispielausgabe:
+Haus mit 50 m² kostet: 7.0 Mio  
+Haus mit 75 m² kostet: 9.5 Mio  
+Haus mit 100 m² kostet: 12.0 Mio  
+Haus mit 125 m² kostet: 14.5 Mio  
+Haus mit 150 m² kostet: 17.0 Mio
+
+Bonus: Sortiere die Ausgabe nach Preis.
+
+
+Aufgabe 3 – Schwer: „Vergleich Lineare vs. Polynom-Regression“
+Bezug zur Lektion: Unterschied zwischen linearer und polynomialer Regression
+
+Aufgabenstellung:
+Erstelle ein Programm, das beide Regressionsarten auf dieselben Daten anwendet und sie grafisch vergleicht.
+
+Was du tun musst:
+- Verwende folgende Daten:
+  x = [50, 60, 70, 80, 90, 100, 110, 120]
+  y = [6, 6.8, 8.2, 9.5, 10.5, 12.5, 15, 18.2]
+
+- Berechne:
+  - Eine lineare Regressionslinie mit: numpy.polyfit(x, y, 1)
+  - Eine quadratische Regression mit: numpy.polyfit(x, y, 2)
+
+- Zeichne alle Punkte und beide Linien mit matplotlib
+- Füge Achsentitel, Legende und einen Diagrammtitel hinzu
+
+Beispiel:
+- Punkte: blaue Kreise
+- Gerade: orange Linie („Linear“)
+- Kurve: grüne Linie („Polynom 2. Grades“)

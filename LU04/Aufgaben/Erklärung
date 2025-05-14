@@ -1,6 +1,6 @@
-🧠 Lektion 4 – Programmieraufgaben (Adam Laib)
+Lektion 4 – Programmieraufgaben (Adam Laib)
 
-🟢 Aufgabe 1 – Einfach: „Vorhersage mit einem ML-Modell“
+Aufgabe 1 – Einfach: „Vorhersage mit einem ML-Modell“
 Bezug zur Lektion: Terminologie – Beziehung: y = b + wx
 
 Aufgabenstellung:
@@ -23,7 +23,7 @@ Beispielausgabe:
     Das Modell sagt voraus: 15.0
 
 
-🟡 Aufgabe 2 – Mittel: „Cluster sichtbar machen“
+Aufgabe 2 – Mittel: „Cluster sichtbar machen“
 Bezug zur Lektion: Cluster, Clustering, Cluster identifizieren
 
 Aufgabenstellung:
@@ -38,7 +38,7 @@ Was du tun musst:
 - Bonus: Zeige im Titel des Diagramms: „Cluster-Erkennung mit KMeans“
 
 
-🔴 Aufgabe 3 – Schwer: „Korrelation berechnen“
+Aufgabe 3 – Schwer: „Korrelation berechnen“
 Bezug zur Lektion: Korrelationskoeffizient
 
 Aufgabenstellung:
