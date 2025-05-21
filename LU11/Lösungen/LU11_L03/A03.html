@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Streudiagramm mit tfjs-vis</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis"></script>
+</head>
+<body>
+<h2>Streudiagramm: x vs. x²</h2>
+
+<div id="vis-area"></div>
+
+<script>
+    window.onload = () => {
+        const x = Array.from({ length: 10 }, (_, i) => i + 1);   // [1, 2, ..., 10]
+        const y = x.map(val => val * val);                       // [1, 4, 9, ..., 100]
+
+        const data = x.map((val, i) => ({ x: val, y: y[i] }));
+
+        tfvis.render.scatterplot(
+            { name: 'Quadratzahlen-Streudiagramm', tab: 'Diagramm' },
+            { values: data },
+            {
+                xLabel: 'x',
+                yLabel: 'y = x²',
+                width: 500,
+                height: 300
+            }
+        );
+    };
+</script>
+</body>
+</html>
