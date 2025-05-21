@@ -1,0 +1,50 @@
+Lektion 8 – Programmieraufgaben (Adam Laïb)
+
+Aufgabe 1 – Einfach: „XOR-Netz trainieren und testen“
+Bezug zur Lektion: Neuronale Netze mit Brain.js (Grundstruktur und Training)
+
+Aufgabenstellung:
+Erstelle ein neuronales Netz, das die XOR-Logik erkennt. Trainiere es mit passenden Eingabemustern und gib die Vorhersage für zwei konkrete Fälle aus.
+
+Was du tun musst:
+- Recherchiere, wie XOR logisch funktioniert  
+- Erstelle ein Trainingsset mit vier typischen Kombinationen  
+- Teste das Netz mit zwei Eingaben und gib die Ergebnisse aus
+
+Beispielausgabe:
+Eingabe: [1, 0] → Vorhersage: ~0.99  
+Eingabe: [1, 1] → Vorhersage: ~0.02
+
+
+Aufgabe 2 – Mittel: „Eigene Logik definieren und Netz trainieren“
+Bezug zur Lektion: Flexibilität von neuronalen Netzen in Brain.js
+
+Aufgabenstellung:
+Denke dir eine eigene einfache Logikregel aus (z. B. mindestens eine 1 ergibt 1). Erstelle dazu ein passendes Netz, trainiere es und teste es mit mehreren Eingaben.
+
+Was du tun musst:
+- Überlege dir eine eindeutige Logikregel  
+- Erstelle Trainingsdaten, die diese Regel widerspiegeln  
+- Teste dein Netz mit mindestens drei Eingaben und analysiere die Vorhersagen
+
+Beispielausgabe:
+Eingabe: [0, 1] → Vorhersage: 1  
+Eingabe: [1, 1] → Vorhersage: 0  
+Eingabe: [0, 0] → Vorhersage: 0
+
+
+Aufgabe 3 – Schwer: „Zahl auf Skala klassifizieren (0 oder 1)“
+Bezug zur Lektion: Klassifikation mit neuronalen Netzen auf kontinuierlicher Skala
+
+Aufgabenstellung:
+Erstelle ein Netz, das erkennt, ob eine Zahl näher bei 0 oder näher bei 1 liegt. Trainiere es mit passenden Beispielen und überprüfe, wie es bei neuen Eingaben reagiert.
+
+Was du tun musst:
+- Wähle Trainingsdaten mit verschiedenen Zahlenwerten zwischen 0 und 1  
+- Ordne diesen Daten jeweils ein Ziel zu (0 oder 1)  
+- Führe Tests mit drei neuen Zahlen durch und interpretiere die Vorhersagen
+
+Beispielausgabe:
+Eingabe: [0.2] → Vorhersage: 0.1  
+Eingabe: [0.5] → Vorhersage: 0.5  
+Eingabe: [0.9] → Vorhersage: 0.9
