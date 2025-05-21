@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+    <meta charset="UTF-8">
+    <title>Aufgabe 3 – Zahl klassifizieren</title>
+<script src="https://unpkg.com/brain.js"></script>
+</head>
+<body>
+<h1>Aufgabe 3 – Zahl auf Skala klassifizieren</h1>
+<p>Ziel: Das Netz soll erkennen, ob eine Zahl näher bei 0 oder bei 1 liegt.</p>
+
+<pre id="output"></pre>
+
+<script>
+    const net = new brain.NeuralNetwork();
+
+    // === Trainingsdaten für Werte zwischen 0 und 1 erstellen ===
+    // Beispiel: { input: [0.1], output: [0] }
+    const trainingsDaten = [
+    // TODO: Trainingsdaten ergänzen
+    ];
+
+    // Netz trainieren
+    net.train(trainingsDaten);
+
+    // === Tests mit neuen Zahlen durchführen ===
+    const ergebnisse = [
+    // TODO: Tests mit net.run(...) durchführen
+    ];
+
+    // Vorhersagen anzeigen
+    document.getElementById("output").textContent = ergebnisse.join('\n');
+</script>
+</body>
+</html>

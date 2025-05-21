@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+    <meta charset="UTF-8">
+    <title>Aufgabe 2 – Eigene Logikregel</title>
+<script src="https://unpkg.com/brain.js"></script>
+</head>
+<body>
+<h1>Aufgabe 2 – Eigene Logikregel definieren und trainieren</h1>
+<p>Ziel: Das Netz soll eine selbst definierte Logikregel lernen (z.&nbsp;B. „mindestens eine 1 ergibt 1“).</p>
+
+<pre id="output"></pre>
+
+<script>
+    const net = new brain.NeuralNetwork();
+
+    // === Eigene Trainingsdaten definieren ===
+    // Beispiel: input: [1, 1], output: [1]
+    const trainingsDaten = [
+    // TODO: Trainingsdaten ergänzen
+    ];
+
+    // Netz trainieren
+    net.train(trainingsDaten);
+
+    // === Drei Eingaben testen ===
+    const ergebnisse = [
+    // TODO: net.run(...) aufrufen und Ergebnisse als Text ergänzen
+    ];
+
+    // Ergebnisse ausgeben
+    document.getElementById("output").textContent = ergebnisse.join('\n');
+</script>
+</body>
+</html>
