@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+    <meta charset="UTF-8">
+    <title>XOR mit brain.js</title>
+<script src="https://unpkg.com/brain.js"></script>
+</head>
+<body>
+<h1>XOR-Test mit brain.js im Browser</h1>
+<pre id="output"></pre>
+
+<script>
+    const net = new brain.NeuralNetwork();
+
+    net.train([
+    { input: [0, 0], output: [0] },
+    { input: [0, 1], output: [1] },
+    { input: [1, 0], output: [1] },
+    { input: [1, 1], output: [0] }
+    ]);
+
+    const results = [
+    `Eingabe [1, 0]: ${net.run([1, 0])}`,
+    `Eingabe [1, 1]: ${net.run([1, 1])}`
+    ];
+
+    document.getElementById("output").textContent = results.join('\n');
+</script>
+</body>
+</html>
