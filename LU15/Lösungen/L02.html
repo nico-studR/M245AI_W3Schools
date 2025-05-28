@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Chart – Umsatzdiagramm</title>
+  <h2>Umsatzanalyse mit Google Chart</h2>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <div id="myChart" style="width: 700px; height: 400px;"></div>
+
+  <script>
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          const data = google.visualization.arrayToDataTable([
+              ['Produkt', 'Umsatz'],
+              ['Buecher', 500],
+              ['Spiele', 800],
+              ['Technik', 1200],
+              ['Kleidung', 700]
+          ]);
+
+          const options = {
+              title:'Umsatz pro Produkt'
+          };
+
+          const chart = new google.visualization.BarChart(document.getElementById('myChart'));
+          chart.draw(data, options);
+      }
+
+  </script>
+</head>
+<body>
+</body>
+</html>

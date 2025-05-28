@@ -1,0 +1,18 @@
+Lektion 19 – Statistik 1 (Adam Laïb)
+
+Diese Lektion behandelt zwei Hauptbereiche:
+Deskriptive Statistik beschreibt Daten durch Maße wie Mittelwert, Median, Modus, Varianz und Standardabweichung.
+Inferenzstatistik erlaubt es, von einer Stichprobe auf die Grundgesamtheit zu schließen (z. B. Umfragen).
+
+Aufgabe 1 – Lagemaße berechnen (leicht)
+Verstehe die drei zentralen Lagemaße (Mittelwert, Median, Modus)
+und was sie über einen Datensatz aussagen.
+
+Aufgabe 2 – Einfluss von Ausreißern (mittel)
+Beurteile, wie stark ein einzelner Extremwert statistische Kennzahlen beeinflusst.
+Untersuche Unterschiede im Mittelwert mit und ohne Ausreißer.
+
+Aufgabe 3 – Streuungsmaße berechnen (schwer)
+Berechne die Varianz und Standardabweichung eines Datensatzes
+und erkläre, was diese über die Verlässlichkeit der Daten aussagen.
+
