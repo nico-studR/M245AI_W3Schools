@@ -1,0 +1,15 @@
+Lektion 13 – Example 2 (Adam Laïb)
+
+In dieser Lektion geht es um die komplette Umsetzung eines Machine Learning Prozesses mit TensorFlow.js. Das Beispiel zeigt, wie man reale Daten verarbeitet, ein Modell erstellt, es trainiert und die Ergebnisse analysiert.
+
+Aufgabe 1 – Daten bereinigen
+Bevor ein Modell trainiert werden kann, müssen die Rohdaten vorbereitet werden. Das bedeutet: Unnötige Felder werden entfernt (map), fehlerhafte Einträge aussortiert (filter) und die verbleibenden Werte werden strukturiert. Dies ist ein wichtiger Schritt, damit das Modell keine falschen Muster lernt.
+
+Aufgabe 2 – Modell bauen
+Ein einfaches neuronales Netz wird mit `tf.sequential()` erstellt. Die Schichten werden mit `dense()` hinzugefügt und das Modell wird mit `compile()` vorbereitet. Ziel ist es, Eingabewerte (z. B. Zimmeranzahl) mit Ausgabewerten (z. B. Preis) zu verknüpfen. Dabei wird mit `meanSquaredError` und dem Optimierer `sgd` gearbeitet.
+
+Aufgabe 3 – Modell trainieren & testen
+Das Modell wird mit den bereinigten Daten trainiert. Dabei hilft die Funktion `model.fit()` mit `callbacks`, den Lernfortschritt zu überwachen. Nach dem Training wird getestet, wie gut das Modell Vorhersagen treffen kann. Dazu werden die Daten in ihre ursprüngliche Skala zurückgerechnet und die Vorhersagen visuell analysiert.
+
+Fazit
+Diese Lektion vermittelt die komplette Pipeline eines ML-Projekts: Daten aufbereiten, Modell bauen, trainieren, testen – und das alles im Browser mit TensorFlow.js und tfjs-vis.
