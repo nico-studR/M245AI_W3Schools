@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chart.js – Liniendiagramm</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h2>Temperaturverlauf</h2>
+<canvas id="myChart" width="900" height="200"></canvas>
+
+<script>
+    const xValues = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
+    const yValues = [12, 14, 15, 13, 17, 16, 18];
+
+    new Chart("myChart", {
+        type: "line",
+        data: {
+            labels: xValues,
+            datasets: [{
+                backgroundColor:"rgba(0,0,255,1.0)",
+                borderColor: "rgba(0,0,255,0.1)",
+                data: yValues
+            }]
+        },
+        options: {
+            legend: {display: false},
+            scales: {
+                yAxes: [{ticks: {min: 6, max: 16}}],
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
