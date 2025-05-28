@@ -9,13 +9,13 @@
 
 const tf = require('@tensorflow/tfjs');
 
-const tensorA = //TODO
-const tensorB = //TODO
+//const tensorA = TODO
+//const tensorB = TODO
 
-const addition = //TODO
-const subtraction = //TODO
-const multiplication = //TODO
-const division = //TODO
+//const addition = TODO
+//const subtraction = TODO
+//const multiplication = TODO
+//const division =TODO
 
 
 Promise.all([

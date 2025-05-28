@@ -10,12 +10,12 @@ const tf = require('@tensorflow/tfjs');
 
 
 // Ursprünglichen Tensor erstellen
-const tensor = //TODO
+//const tensor = TODO
 
 // Verschiedene Umformungen (reshape)
-const reshaped1 = //TODO
-const reshaped2 = //TODO
-const reshaped3 = //TODO
+//const reshaped1 = TODO
+//const reshaped2 = TODO
+//const reshaped3 = TODO
 
 // Ergebnisse ausgeben
 Promise.all([
